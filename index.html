@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="my-input">
+
+    <button id="my-button">My sweet button</button>
+<!-- Uzdevums: Uzspiežot uz "X" dzēst li elementu -->
+<ul id="my-list">
+    <li>List item 1<button id="target">X</button></li>
+    <li>List item 2<button id="target">X</button></li>
+    <li>List item 3<button id="target">X</button></li>
+    <li>List item 4<button id="target">X</button></li>
+    <li>List item 5<button>X</button></li>
+</ul>
+
+<script>
+    const myElement = document.getElementById("my-button")
+    const myInput = document.getElementById("my-input")
+    const myList = document.getElementById("my-list")
+
+    myElement.addEventListener("click", handleButtonClick);
+    myInput.addEventListener("click", handleButtonClick)
+    myList.addEventListener("click", removeItem)
+
+    function handleButtonClick(){
+        console.log(myInput.value)
+    }
+
+    function handleButtonClick(){
+        console.log(myElement.value)
+    }
+
+    function removeItem(e){
+        console.log(e.target.innerHTML)
+     if (e.target.innerHTML == "X"){
+        e.target.parentNode.remove();
+     }
+    }
+</script>
+   
+
+<!-- const myElement = document.getElementById("my-button")
+    myElement.addEventListener("click", handleButtonClick);
+
+    const myInput = document.getElementById("my-input")
+    const myList = document.getElementById("my-list")
+
+    myElement.addEventListener("click", handleButtonClick);
+    myList.addEventListener("click", removeItem); -->
+
+
+
+</body>
+</html>
